@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@keyframes gradient {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #fb6124, #f43f5e);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 4s ease-in-out infinite;
+}
+.border-gradient {
+  border-image: linear-gradient(90deg, #fb3d24, #f43f5e) 1;
+}
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 40rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 80rem;
+}
